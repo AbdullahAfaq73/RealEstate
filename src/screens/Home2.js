@@ -16,11 +16,15 @@ import {
   Button,
 } from 'native-base';
 import firestore from '@react-native-firebase/firestore';
+import { useAuthContext } from '../contexts/AuthContext';
 
 
 export default function Home2({ navigation }) {
 
+  const {isAuthenticated}= useAuthContext()
   const [documents, setDocuments] = useState([]);
+
+  const { user} = useAuthContext()
 
   const fetchDocumets = () => {
     let array = [];
