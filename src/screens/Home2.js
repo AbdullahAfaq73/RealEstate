@@ -51,7 +51,7 @@ export default function Home2({ navigation }) {
   const cardWidth = (Dimensions.get('window').width - cardGap * 3) / 2
   return (
     <ScrollView>
-      <ImageBackground source={require('../database/images/bg3.png')}>
+      <ImageBackground source={require('../database/images/bg2.jpg')}>
         <View
           style={{
             width: '100%',

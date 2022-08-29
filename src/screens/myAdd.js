@@ -82,7 +82,6 @@ try {
  });
  };
  return (
-   <ImageBackground source={require('../database/images/bg2.png')} >
  <View style={Styles.flexContainer}>
  <Heading>Post Your add</Heading>
  <FormControl>
@@ -188,7 +187,6 @@ justifyContent: 'center',}}
  </Box>
  </FormControl>
  </View>
- </ImageBackground>
  );
 }
 const Styles = StyleSheet.create({

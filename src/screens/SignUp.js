@@ -92,7 +92,7 @@ export default function Login({ navigation }) {
 
     return (
         <ImageBackground
-            source={require('../database/images/bg3.png')}
+            source={require('../database/images/bg2.jpg')}
             style={{
                 flex: 1,
                 justifyContent: 'center',
