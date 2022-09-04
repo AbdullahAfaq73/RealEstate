@@ -82,6 +82,8 @@ export default function Login({navigation}) {
                 <Button mode="contained" buttonColor='green' textColor='white' style={{ borderRadius: 20 }} loading={isProcessing ? true : false} onPress={handleSubmit}>Login</Button>
         
                 <Button mode="contained" buttonColor='blue' textColor='white' style={{ borderRadius: 10, marginTop:30, }}  onPress={()=> navigation.navigate('SignUp')}>Dont have an account? click here</Button>
+
+                
         
                </View> 
             </View>

@@ -1,9 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { View, Text, StyleSheet, Dimensions, ImageBackground, TouchableOpacity, Linking } from 'react-native'
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
-import { COLOURS, Items } from '../database/Database';
-import FontAwesome from 'react-native-vector-icons/FontAwesome';
-// import {Box, Heading, ScrollView} from 'native-base';
+import { COLOURS} from '../database/Database';
 import {
   Box,
   ScrollView,
@@ -108,7 +106,7 @@ export default function Home2({ navigation }) {
                 {'\n'}Now you can make deals sitting in your home.
               </Text>
             </View>
-{/* gshsg */}
+
           </TouchableOpacity>
           <TouchableOpacity onPress={() => { navigation.navigate('MyAdd') }}>
             <MaterialCommunityIcons
@@ -127,7 +125,7 @@ export default function Home2({ navigation }) {
         </View>
         <View style={Styles.flexContainer}>
           <Box py="3">
-            <Heading>Available Adds</Heading>
+            <Heading style={{textAlign:'center'}}>Available Adds</Heading>
             <Box
               style={{
                 flexDirection: 'row',
@@ -203,7 +201,7 @@ export default function Home2({ navigation }) {
                             fontWeight="500"
                             ml="-0.5"
                             mt="-1">
-                            Faisalabad
+                           {item.location}
                           </Text>
                         </Stack>
                         <Text style={{ color: 'black', paddingBottom: 3 }}>
@@ -214,24 +212,26 @@ export default function Home2({ navigation }) {
                           space={4}
                           justifyContent="space-between">
                           <HStack alignItems="center">
-                            <Text
-                              color="coolGray.600"
-                              _dark={{
-                                color: 'warmGray.200',
-                              }}
-                              fontWeight="400">
-                              6 mins ago
-                            </Text>
+                           
                           </HStack>
                           <Text style={{ color: 'green', paddingBottom: 3 }}>
                             PKR .{item.price}
                           </Text>
 
                         </HStack>
+                        <Text style={{ color: 'blue', paddingBottom: 3 }}>
+                         Add by: {item.createdBy}
+                          </Text>
+
+                          <Text style={{ color: 'black', paddingBottom: 3 }}>
+                         Contact: {item.phonenNO}
+                          </Text>
+                        
+
                         <Box>
                           <Button
                             onPress={() => {
-                              Linking.openURL("mailto:support@example.com");
+                              Linking.openURL('mailto:abdullahafaq73@gmail.com');
                             }}
                             style={{
                               backgroundColor: '#0d6efd',
@@ -243,37 +243,7 @@ export default function Home2({ navigation }) {
                       </Stack>
                     </Box>
                   </Box>
-                  // <View 
-                  //   key={item.id}
-                  //   style={{
-                  //     marginTop: cardGap,
-                  //     marginLeft: index % 2 !== 0 ? cardGap : 0,
-                  //     height: 350,
-                  //     backgroundColor: 'white',
-                  //     borderRadius: 10,
-                  //     shadowOpacity: 0.2,
-                  //     justifyContent: 'center',
-                  //     alignItems: 'center',
-                  //   }}>
-                  //   <Image
-                  //     style={Styles.productImage}
-                  //     source={{uri: item.image}}
-                  //     alt="Alternate Text"
-                  //     size="xl"
-                  //     />
-                  //   <Text style={{paddingTop: 5, paddingBottom: 5, fontWeight:'bold',}}>
-                  //     {item.productTitle}
-                  //   </Text>
-                  // <Text style={{color: 'black', paddingBottom: 3}}>
-                  //   PKR .{item.description}
-                  // </Text>
-                  //   <Text style={{color: '#0d6efd', paddingBottom: 3}}>
-                  //     PKR .{item.price}
-                  //   </Text>
-                  //   <Button title='Contact'/>
-                  //   <View style={{paddingBottom: 5}}>
-                  //      </View>
-                  // </View>
+       
 
 
                 );

@@ -9,7 +9,7 @@ const initialState = { isAuthenticated: false, isProcessing: true }
 const reducer = (state, action) => {
     switch (action.type) {
         case "LOGIN":
-            return Object.assign({}, { isAuthenticated: true }, { isProcessing: false }, { user: action.payload.user })
+            return Object.assign({}, { isAuthenticated: true  }, { isProcessing: false }, { user: action.payload.user })
         case "LOGOUT":
             return Object.assign({}, { isAuthenticated: false }, { isProcessing: false })
         default:

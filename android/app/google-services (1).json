@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "267189892375",
+    "project_id": "afaqtechs-6d323",
+    "storage_bucket": "afaqtechs-6d323.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:267189892375:android:f516dbbb2671ae4b84f352",
+        "android_client_info": {
+          "package_name": "com.afaqtechs"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "267189892375-50b91n4p29bdkqoc4ipr4ua5ruarv14b.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCgd0bo1AVm7BLjQlc14jtJUCMIaU_pul8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "267189892375-50b91n4p29bdkqoc4ipr4ua5ruarv14b.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

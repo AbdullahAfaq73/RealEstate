@@ -1,7 +1,8 @@
 import {View, Text, StyleSheet, Alert, ImageBackground,} from 'react-native';
-import React, {useState} from 'react';
+import React, {useContext, useState} from 'react';
 import firestore from '@react-native-firebase/firestore';
 import storage from '@react-native-firebase/storage';
+import firebase from "@react-native-firebase/app"
 import {
  Heading,
  Input,
@@ -12,7 +13,13 @@ import {
  Button,
 } from 'native-base';
 import {launchImageLibrary} from 'react-native-image-picker';
+import {useAuthContext} from "../contexts/AuthContext"
+
+
 export default function About() {
+   const { dispatch } = useAuthContext()
+const { user } = useAuthContext(useAuthContext)
+
  const [selectImage, setselectImage] = useState('');
  const [productTitle, setproductTitle] = useState('');
  const [category, setCategory] = useState('');
@@ -20,6 +27,7 @@ export default function About() {
  const [description, setDescription] = useState('');
  const [phonenNO, setphoneNo] = useState('');
  const [location, setlocation] = useState('');
+
 
 
  console.log(productTitle);
@@ -44,7 +52,11 @@ try {
  phonenNO,
  location,
  image: url,
+ createdBy: user.email,
+//   createdbby: user.email,
+ dateCreated: firebase.firestore.FieldValue.serverTimestamp()
  };
+
 
 
  await firestore().collection('Houses').add(obj)
@@ -56,7 +68,7 @@ try {
  setDescription('');
  setphoneNo('');
  location('');
-
+// console.log(user);
 } catch (error) {
  console.log("error in add product", error); 
 }
